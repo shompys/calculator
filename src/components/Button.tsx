@@ -5,7 +5,7 @@ type Props = {
   expanded?: boolean;
   text?: string;
   color?: 'orange' | 'gray';
-  onPress?: (number: string) => void;
+  onPress: (number: string) => void;
 };
 export const Button = ({
   expanded = false,
@@ -24,9 +24,7 @@ export const Button = ({
     color && globalStyle[color] === globalStyle.gray ? '#000' : '#fff';
 
   return (
-    <TouchableOpacity
-      style={buttonStyle}
-      onPress={() => onPress && onPress(text)}>
+    <TouchableOpacity style={buttonStyle} onPress={() => onPress(text)}>
       <View>
         <Text
           style={{
