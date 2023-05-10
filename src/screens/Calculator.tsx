@@ -30,7 +30,7 @@ export const Calculator = () => {
   };
 
   const setPositiveOrNegative = () => {
-    if (number.startsWith('0')) {
+    if (number.startsWith('0') && number.length === 1) {
       return;
     }
     if (number.includes('-')) {
